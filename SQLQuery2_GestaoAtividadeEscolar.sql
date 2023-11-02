@@ -2,12 +2,12 @@ USE [master]
 GO
 /****** Object:  Database [GestaoAtividadeEscolar]    Script Date: 01/11/2023 21:54:18 ******/
 CREATE DATABASE [GestaoAtividadeEscolar]
- CONTAINMENT = NONE
- ON  PRIMARY 
-( NAME = N'GestaoAtividadeEscolar', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS2019\MSSQL\DATA\GestaoAtividadeEscolar.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
- LOG ON 
-( NAME = N'GestaoAtividadeEscolar_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS2019\MSSQL\DATA\GestaoAtividadeEscolar_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
- WITH CATALOG_COLLATION = DATABASE_DEFAULT
+-- CONTAINMENT = NONE
+-- ON  PRIMARY 
+--( NAME = N'GestaoAtividadeEscolar', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS2019\MSSQL\DATA\GestaoAtividadeEscolar.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+-- LOG ON 
+--( NAME = N'GestaoAtividadeEscolar_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS2019\MSSQL\DATA\GestaoAtividadeEscolar_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+-- WITH CATALOG_COLLATION = DATABASE_DEFAULT
 GO
 ALTER DATABASE [GestaoAtividadeEscolar] SET COMPATIBILITY_LEVEL = 150
 GO
