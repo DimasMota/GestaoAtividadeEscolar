@@ -29,26 +29,33 @@ namespace GestaoAtividadeEscolar
                 ProfessorBLL professorBLL = new ProfessorBLL();
                 ProfessorModels professor = new ProfessorModels();
                 professor = professorBLL.BuscarVerificarUsuarioSenha(usuario, senha);
-                if(professor == null)
+                if(professor == null|| professor.Id < 1 )
                 {
                     MessageBox.Show("Usuário ou Senha Inválido");
                 }
                 else
                 {
-                  
+                    Constantes.IdUsuarioLogado = professor.Id;
+                    Constantes.UsuarioLogado = professor.Nome;
+                    Close();
                 }
 
             }
             catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
+        }
+
+        private void FormLoginSenha_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

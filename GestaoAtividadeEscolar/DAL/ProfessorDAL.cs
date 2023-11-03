@@ -101,7 +101,42 @@ namespace DAL
         }
         public ProfessorModels BuscarProfessorPorId(int id)
         {
-            throw new Exception();
+            ProfessorModels professor = new ProfessorModels();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+
+                cmd.CommandText = @"SELECT Id, Nome, Usuario,Senha FROM Professor WHERE Id = @Id";
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@Id", id);
+               
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    if (rd.Read())
+                    {
+                        professor.Id = Convert.ToInt32(rd["Id"]);
+                        professor.Nome = Convert.ToString(rd["Nome"]);
+                        professor.Usuario = Convert.ToString(rd["Usuario"]);
+                        professor.Senha = Convert.ToString(rd["Senha"]);
+                    }
+                }
+                return professor;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro ao tentar buscar Usuário no Banco de Dados", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
         public ProfessorModels BuscarVerificarUsuarioSenha(string usuario, string senha)
         {
@@ -109,8 +144,10 @@ namespace DAL
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             try
             {
-                SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"SELECT Id, Nome, Usuario,Senha FROM Professor WHERE Usuario = @Usuario AND Senha == @Senha";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cn;
+            
+                cmd.CommandText = @"SELECT Id, Nome, Usuario,Senha FROM Professor WHERE Usuario = @Usuario AND Senha = @Senha";
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 cmd.Parameters.AddWithValue("@Usuario", usuario);
@@ -133,7 +170,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw new Exception("Erro ao tentar buscar Usuário no Banco de Dados");
+                throw new Exception("Erro ao tentar buscar Usuário no Banco de Dados",ex);
             }
             finally
             {

@@ -16,7 +16,7 @@ namespace GestaoAtividadeEscolar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLoginSenha());
+            Application.Run(new Principal());
         }
     }
 }
