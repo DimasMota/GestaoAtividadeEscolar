@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{90C55B83-0993-45CD-A000-7040C1CAFE48}</ProjectGuid>
+    <ProjectGuid>{4707E67D-E9AC-41A6-BD2F-44BE53259844}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Models</RootNamespace>
@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AtividadeModels.cs" />
+    <Compile Include="Atividade.cs" />
     <Compile Include="Constantes.cs" />
-    <Compile Include="ProfessorModels.cs" />
+    <Compile Include="Professor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TurmaModels.cs" />
+    <Compile Include="Turma.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

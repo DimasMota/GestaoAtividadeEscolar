@@ -11,25 +11,18 @@ namespace BLL
 {
     public class ProfessorBLL
     {
-        public ProfessorModels BuscarProfessorPorId(int idUsuarioLogado)
+        public Professor ValidarUsuarioSenha(string _usuario, string _senha)
         {
-            return new ProfessorDAL().BuscarProfessorPorId(idUsuarioLogado);
-        }
+            Professor professor = new Professor();
 
-        public ProfessorModels BuscarVerificarUsuarioSenha(string usuario, string senha)
-        {
+            professor = new ProfessorDAL().ValidarUsuarioSenha(_usuario, _senha);
 
-            try
+            if(String.IsNullOrEmpty(professor.Nome))
             {
-
-            return new ProfessorDAL().BuscarVerificarUsuarioSenha(usuario, senha);
+                throw new Exception("Senha ou Usuário inválido");
             }
-            catch (Exception  ex)
-            {
+            return professor;
 
-                throw;
-            }
-            
         }
     }
 }

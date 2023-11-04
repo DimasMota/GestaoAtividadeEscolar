@@ -46,35 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormAtividade.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAtividade.Designer.cs">
-      <DependentUpon>FormAtividade.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormLoginSenha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLoginSenha.Designer.cs">
-      <DependentUpon>FormLoginSenha.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Principal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Principal.Designer.cs">
-      <DependentUpon>Principal.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormAtividade.resx">
-      <DependentUpon>FormAtividade.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLoginSenha.resx">
-      <DependentUpon>FormLoginSenha.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Principal.resx">
-      <DependentUpon>Principal.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -103,11 +76,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{d3dfd023-5511-4ee1-9383-38841f5b8f51}</Project>
+      <Project>{2585e3a1-c10a-48ed-bfa5-6bda56f1c0ea}</Project>
       <Name>BLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{90c55b83-0993-45cd-a000-7040c1cafe48}</Project>
+      <Project>{4707e67d-e9ac-41a6-bd2f-44be53259844}</Project>
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>

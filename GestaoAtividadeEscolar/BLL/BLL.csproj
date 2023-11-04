@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D3DFD023-5511-4EE1-9383-38841F5B8F51}</ProjectGuid>
+    <ProjectGuid>{2585E3A1-C10A-48ED-BFA5-6BDA56F1C0EA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BLL</RootNamespace>
@@ -48,11 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{92670845-f37b-48cc-a0b7-b8ef202009ef}</Project>
+      <Project>{f338819c-c0a9-4e43-9d43-55dd2c57282c}</Project>
       <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{90c55b83-0993-45cd-a000-7040c1cafe48}</Project>
+      <Project>{4707e67d-e9ac-41a6-bd2f-44be53259844}</Project>
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
