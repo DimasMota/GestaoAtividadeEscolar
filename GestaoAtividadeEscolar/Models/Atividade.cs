@@ -8,9 +8,8 @@ namespace Models
 {
     public class Atividade
     {
-        public int iD { get; set; }
+        public int Id { get; set; }
         public string Nome { get; set; }
-        public int IdTurma { get; set; }
-        public string NomeTurma { get; set; }
+      
     }
 }

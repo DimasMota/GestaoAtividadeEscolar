@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B479966D-70F2-4478-8BC1-48751CA44E56}</ProjectGuid>
+    <ProjectGuid>{05E861BD-37CD-4116-A86A-5004DF93329B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>GestaoAtividadeEscolar</RootNamespace>
     <AssemblyName>GestaoAtividadeEscolar</AssemblyName>
@@ -46,8 +46,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCadastrarAtividade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastrarAtividade.Designer.cs">
+      <DependentUpon>FormCadastrarAtividade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastrarTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastrarTurma.Designer.cs">
+      <DependentUpon>FormCadastrarTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInserirAtividade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInserirAtividade.Designer.cs">
+      <DependentUpon>FormInserirAtividade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoginSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginSenha.Designer.cs">
+      <DependentUpon>FormLoginSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCadastrarAtividade.resx">
+      <DependentUpon>FormCadastrarAtividade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastrarTurma.resx">
+      <DependentUpon>FormCadastrarTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInserirAtividade.resx">
+      <DependentUpon>FormInserirAtividade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginSenha.resx">
+      <DependentUpon>FormLoginSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -57,10 +102,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Properties\DataSources\Models.AtividadeModels.datasource" />
+    <None Include="Properties\DataSources\Models.Atividade.datasource" />
     <None Include="Properties\DataSources\Models.Constantes.datasource" />
-    <None Include="Properties\DataSources\Models.ProfessorModels.datasource" />
-    <None Include="Properties\DataSources\Models.TurmaModels.datasource" />
+    <None Include="Properties\DataSources\Models.Professor.datasource" />
+    <None Include="Properties\DataSources\Models.Turma.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
