@@ -73,13 +73,13 @@
             this.turmaDataGridView.AllowUserToOrderColumns = true;
             this.turmaDataGridView.AutoGenerateColumns = false;
             this.turmaDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.turmaDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.turmaDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.turmaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.turmaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -90,16 +90,18 @@
             this.turmaDataGridView.DataSource = this.turmaBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.HotTrack;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.turmaDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.turmaDataGridView.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.turmaDataGridView.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.turmaDataGridView.Location = new System.Drawing.Point(44, 132);
             this.turmaDataGridView.Name = "turmaDataGridView";
             this.turmaDataGridView.ReadOnly = true;
+            this.turmaDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.turmaDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.turmaDataGridView.RowHeadersVisible = false;
             this.turmaDataGridView.Size = new System.Drawing.Size(744, 306);
             this.turmaDataGridView.TabIndex = 46;
