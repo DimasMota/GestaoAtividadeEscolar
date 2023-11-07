@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{92670845-F37B-48CC-A0B7-B8EF202009EF}</ProjectGuid>
+    <ProjectGuid>{7F2F04C2-D6DE-444B-AFE7-1CA7A92FF40F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAL</RootNamespace>
@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AtividadeDAL.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="ProfessorDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -49,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{90c55b83-0993-45cd-a000-7040c1cafe48}</Project>
+      <Project>{e82b0a77-70e9-4b48-842f-a69e6583d73e}</Project>
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>

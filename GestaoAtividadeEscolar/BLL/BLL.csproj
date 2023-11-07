@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D3DFD023-5511-4EE1-9383-38841F5B8F51}</ProjectGuid>
+    <ProjectGuid>{D371F65A-415B-4477-90F6-6EB53E0D4356}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BLL</RootNamespace>
@@ -41,18 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AtividadeBLL.cs" />
     <Compile Include="ProfessorBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TurmaBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{92670845-f37b-48cc-a0b7-b8ef202009ef}</Project>
+      <Project>{7f2f04c2-d6de-444b-afe7-1ca7a92ff40f}</Project>
       <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{90c55b83-0993-45cd-a000-7040c1cafe48}</Project>
+      <Project>{e82b0a77-70e9-4b48-842f-a69e6583d73e}</Project>
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>

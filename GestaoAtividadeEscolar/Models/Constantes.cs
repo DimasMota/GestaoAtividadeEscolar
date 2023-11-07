@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +12,6 @@ namespace Models
         public static string UsuarioLogado;
         public static string StringDeConexao;
         public static string DiretorioStringConexao = "C:\\Configuracao\\";
-        public static string NomeArquivoConexao = "GestaoAtividadeEscolarConnection.config";
-       
+        public static string NomeArquivoConexao = "GestaoAtividade03Connection.config";
     }
 }

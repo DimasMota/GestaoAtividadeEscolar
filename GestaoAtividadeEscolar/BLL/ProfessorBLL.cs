@@ -2,7 +2,6 @@
 using Models;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,25 +10,9 @@ namespace BLL
 {
     public class ProfessorBLL
     {
-        public ProfessorModels BuscarProfessorPorId(int idUsuarioLogado)
+        public Professor ValidarProfessor(string usuario, string senha)
         {
-            return new ProfessorDAL().BuscarProfessorPorId(idUsuarioLogado);
-        }
-
-        public ProfessorModels BuscarVerificarUsuarioSenha(string usuario, string senha)
-        {
-
-            try
-            {
-
-            return new ProfessorDAL().BuscarVerificarUsuarioSenha(usuario, senha);
-            }
-            catch (Exception  ex)
-            {
-
-                throw;
-            }
-            
+            return new ProfessorDAL().ValidarProfessor(usuario, senha);
         }
     }
 }

@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class ProfessorModels
+    public class Professor
     {
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Usuario { get; set; }
         public string Senha { get; set; }
-        public List<TurmaModels> Turmas { get; set; }
 
-        public ProfessorModels()
+        public List<Turma> Turmas { get; set; }
+
+        public Professor()
         {
-            Turmas = new List<TurmaModels>();
+            Turmas = new Turma();
         }
     }
 }
