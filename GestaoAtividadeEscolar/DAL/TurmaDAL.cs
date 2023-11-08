@@ -38,5 +38,77 @@ namespace DAL
                 cn.Close();
             }
         }
+        public List<Turma> BuscarTodasTurmas(int idprofessor)
+        {
+            List<Turma> turmas = new List<Turma>();
+            Turma turma;
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"SELECT Id, Nome FROM Turma WHERE IdProfessor = @Id";
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@Id", idprofessor);
+
+
+                cn.Open();
+
+                using (SqlDataReader rd = cmd.ExecuteReader())
+                {
+                    while (rd.Read())
+                    {
+                        turma = new Turma();
+                        turma.Id = Convert.ToInt32(rd["Id"]);
+                        turma.Nome = Convert.ToString(rd["Nome"]);
+                        turmas.Add(turma);
+
+                    }
+                }
+                return turmas;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro ao tentar acessar o banco de dados", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
+        public void Excluir(int idTurma)
+        {
+
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = @"DELETE FROM Turma WHERE Id = @Id";
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                cmd.Parameters.AddWithValue("@Id", idTurma);
+
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro ao tentar Excluir uma turma do banco de dados", ex);
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
+
     }
 }
