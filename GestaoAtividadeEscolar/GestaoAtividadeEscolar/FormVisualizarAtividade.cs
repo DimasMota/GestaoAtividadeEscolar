@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,49 @@ namespace GestaoAtividadeEscolar
 {
     public partial class FormVisualizarAtividade : Form
     {
-        public FormVisualizarAtividade()
+        private Turma turma = new Turma();
+        public FormVisualizarAtividade(Turma _turma)
         {
             InitializeComponent();
+            turma = _turma;
+        }
+
+        private void FormVisualizarAtividade_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                lblNomeTurma.Text = turma.Nome;
+                lblUsuarioLogado.Text = Constantes.UsuarioLogado;
+
+                atividadeBindingSource.DataSource = new AtividadeBLL().BuscarTodasAtividades(turma.Id);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bntCadastrarAtividade_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using(FormCadastrarAtividade frm = new FormCadastrarAtividade(turma))
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

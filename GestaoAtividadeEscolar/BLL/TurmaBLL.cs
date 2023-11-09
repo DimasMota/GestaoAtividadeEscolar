@@ -21,9 +21,11 @@ namespace BLL
            
         }
 
-        public bool VerificarVinculoAtividade(int id)
+        
+
+        public void Excluir(int idturma)
         {
-            throw new NotImplementedException();
+            new TurmaDAL().Excluir(idturma);
         }
     }
 }

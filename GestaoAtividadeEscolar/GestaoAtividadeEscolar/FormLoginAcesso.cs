@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,37 @@ namespace GestaoAtividadeEscolar
         public FormLoginAcesso()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Professor professor = new Professor();
+                professor = new ProfessorBLL().ValidarProfessor(txtUsuario.Text, txtSenha.Text);
+                if(String.IsNullOrEmpty(professor.Nome) || professor.Id == 0)
+                {
+                    MessageBox.Show("Usuário e/ou Senha Inválido");
+                    txtSenha.Clear();
+                    txtUsuario.Clear();
+                    txtUsuario.Focus();
+                    return;
+                }
+                Constantes.IdUsuarioLogado = professor.Id;
+                Constantes.UsuarioLogado = professor.Nome;
+                Close();
+
+            }
+            catch (Exception ex)
+            {
+
+               MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
