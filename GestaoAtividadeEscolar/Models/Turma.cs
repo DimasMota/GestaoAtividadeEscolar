@@ -12,9 +12,9 @@ namespace Models
         public string Nome { get; set; }
         public List<Atividade> Atividades { get; set; }
 
-        public Turma()
-        {
-            Atividades = new Atividade();
-        }
+        //public Turma()
+        //{
+        //    Atividades = new Atividade();
+        //}
     }
 }

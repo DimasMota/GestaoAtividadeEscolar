@@ -16,10 +16,10 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO  Turma( Nome, IdProfessor) c Turma ";
+                cmd.CommandText = @"INSERT INTO  Turma( Nome, IdProfessor) values (@Nome, @IdProfessor) ";
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.Parameters.AddWithValue("@Usuario", usuario);
-                cmd.Parameters.AddWithValue("@Senha", senha);
+                cmd.Parameters.AddWithValue("@Nome", turma.Nome);
+                cmd.Parameters.AddWithValue("@IdProfessor", Constantes.IdUsuarioLogado);
 
                
 

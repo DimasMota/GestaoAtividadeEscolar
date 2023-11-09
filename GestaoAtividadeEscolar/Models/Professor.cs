@@ -15,9 +15,9 @@ namespace Models
 
         public List<Turma> Turmas { get; set; }
 
-        public Professor()
-        {
-            Turmas = new Turma();
-        }
+        //public Professor()
+        //{
+        //    Turmas = new Turma();
+        //}
     }
 }
