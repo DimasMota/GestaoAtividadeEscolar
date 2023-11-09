@@ -41,16 +41,21 @@ namespace GestaoAtividadeEscolar
                         MessageBox.Show("Selecione uma atividade");
                         return;
                     }
+                    if (MessageBox.Show("Id: " + turma.Id + " Turma: " + turma.Nome + "\nAs Atividades desta turma também serão excluidas. \n Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
+                    {
+                        MessageBox.Show("Exclusão de turma cancelada");
+                        return;
+
+                    }
+
                     List<Atividade> atividades = new List<Atividade>();
                     atividades = new AtividadeBLL().BuscarTodasAtividades(turma.Id);
 
                     if (atividades.Count()>0 )
                     {
-                        MessageBox.Show("Não é possível excluir esta turma. Tem atividades vinculadas.");
+                        MessageBox.Show("Você não pode excluir uma turma com atividades cadastradas");
                         return;
                     }
-                    if (MessageBox.Show("Id: " + turma.Id + " Turma: " + turma.Nome + "\nAs Atividades desta turma também serão excluidas. \n Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
-                        return;
 
 
                     new TurmaBLL().Excluir(turma.Id);
@@ -90,6 +95,27 @@ namespace GestaoAtividadeEscolar
                 turmas = new TurmaBLL().BuscarTodasTurmas(Constantes.IdUsuarioLogado);
                 turmaBindingSource.DataSource = turmas;
 
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnCadastrarTurma_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using(FormCadastrarTurma frm = new FormCadastrarTurma())
+                {
+                    frm.ShowDialog();
+                }
+                List<Turma> turmas = new List<Turma>();
+
+                turmas = new TurmaBLL().BuscarTodasTurmas(Constantes.IdUsuarioLogado);
+                turmaBindingSource.DataSource = turmas;
 
             }
             catch (Exception ex)

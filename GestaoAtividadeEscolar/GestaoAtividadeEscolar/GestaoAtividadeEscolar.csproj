@@ -52,6 +52,12 @@
     <Compile Include="FormCadastrarAtividade.Designer.cs">
       <DependentUpon>FormCadastrarAtividade.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastrarTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastrarTurma.Designer.cs">
+      <DependentUpon>FormCadastrarTurma.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLoginAcesso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCadastrarAtividade.resx">
       <DependentUpon>FormCadastrarAtividade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastrarTurma.resx">
+      <DependentUpon>FormCadastrarTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLoginAcesso.resx">
       <DependentUpon>FormLoginAcesso.cs</DependentUpon>

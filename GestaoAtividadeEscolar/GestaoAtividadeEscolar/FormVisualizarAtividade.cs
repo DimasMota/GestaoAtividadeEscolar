@@ -25,6 +25,7 @@ namespace GestaoAtividadeEscolar
         {
             try
             {
+                this.Hide();
                 lblNomeTurma.Text = turma.Nome;
                 lblUsuarioLogado.Text = Constantes.UsuarioLogado;
 
@@ -50,13 +51,23 @@ namespace GestaoAtividadeEscolar
                 using(FormCadastrarAtividade frm = new FormCadastrarAtividade(turma))
                 {
                     frm.ShowDialog();
+                    if(frm.fechar == 1)
+                    {
+                        Close();
+                    }
                 }
+                atividadeBindingSource.DataSource = new AtividadeBLL().BuscarTodasAtividades(turma.Id);
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void lblUsuarioLogado_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

@@ -17,12 +17,12 @@ namespace DAL
             try
             {
                 SqlCommand cmd = cn.CreateCommand();
-                cmd.CommandText = @"SELECT Id, Nome FROM Professor WHERE Usuario = @Usuaario AND Senha = @Senha";
+                cmd.CommandText = @"SELECT Id, Nome FROM Professor WHERE Usuario = @Usuario AND Senha = @Senha";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@Usuario", usuario);
                 cmd.Parameters.AddWithValue("@Senha", senha);
-
-                using(SqlDataReader rd = cmd.ExecuteReader())
+                cn.Open();
+                using (SqlDataReader rd = cmd.ExecuteReader())
                 {
                     if (rd.Read())
                     {
@@ -33,8 +33,8 @@ namespace DAL
                 }
                 return professor;
 
-                cn.Open();
-                cmd.ExecuteNonQuery();
+               
+              
 
 
             }
