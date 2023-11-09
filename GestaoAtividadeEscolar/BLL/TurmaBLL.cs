@@ -20,5 +20,10 @@ namespace BLL
            return new TurmaDAL().BuscarTodasTurmas(idprofessor);
            
         }
+
+        public bool VerificarVinculoAtividade(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
