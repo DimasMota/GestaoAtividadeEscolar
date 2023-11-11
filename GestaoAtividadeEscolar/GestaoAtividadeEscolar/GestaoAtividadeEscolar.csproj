@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{09C06488-F16E-4F2C-BAB4-DEEBA3321D02}</ProjectGuid>
+    <ProjectGuid>{05E861BD-37CD-4116-A86A-5004DF93329B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>GestaoAtividadeEscolar</RootNamespace>
     <AssemblyName>GestaoAtividadeEscolar</AssemblyName>
@@ -58,17 +58,13 @@
     <Compile Include="FormCadastrarTurma.Designer.cs">
       <DependentUpon>FormCadastrarTurma.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLoginAcesso.cs">
-      <SubType>Form</SubType>
+    <Compile Include="FormInserirAtividade.cs" />
+    <Compile Include="FormInserirAtividade.Designer.cs">
+      <DependentUpon>FormInserirAtividade.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLoginAcesso.Designer.cs">
-      <DependentUpon>FormLoginAcesso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormVisualizarAtividade.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormVisualizarAtividade.Designer.cs">
-      <DependentUpon>FormVisualizarAtividade.cs</DependentUpon>
+    <Compile Include="FormLoginSenha.cs" />
+    <Compile Include="FormLoginSenha.Designer.cs">
+      <DependentUpon>FormLoginSenha.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -84,11 +80,11 @@
     <EmbeddedResource Include="FormCadastrarTurma.resx">
       <DependentUpon>FormCadastrarTurma.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLoginAcesso.resx">
-      <DependentUpon>FormLoginAcesso.cs</DependentUpon>
+    <EmbeddedResource Include="FormInserirAtividade.resx">
+      <DependentUpon>FormInserirAtividade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormVisualizarAtividade.resx">
-      <DependentUpon>FormVisualizarAtividade.cs</DependentUpon>
+    <EmbeddedResource Include="FormLoginSenha.resx">
+      <DependentUpon>FormLoginSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -121,11 +117,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{d371f65a-415b-4477-90f6-6eb53e0d4356}</Project>
+      <Project>{2585e3a1-c10a-48ed-bfa5-6bda56f1c0ea}</Project>
       <Name>BLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{e82b0a77-70e9-4b48-842f-a69e6583d73e}</Project>
+      <Project>{4707e67d-e9ac-41a6-bd2f-44be53259844}</Project>
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
